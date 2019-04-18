@@ -21,6 +21,7 @@ const prepareData = (body) => {
    bot.on('message', (msg) => {
     if (msg.text.toString() === trigger) {
      return request(url, (err, resp, body) => {
+       console.log(body)
       bot.sendMessage(msg.chat.id, prepareData(body));
      });
     } else if (msg.text.toString() === 'No') {
