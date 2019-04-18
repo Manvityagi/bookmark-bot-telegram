@@ -7,7 +7,7 @@ const url = 'https://launchlibrary.net/1.3/launch';
 const trigger = 'I want to travel!';
 const token = process.env.token;
 
-const bot = new Bot(token, {polling: true , webHook: {port: process.env.PORT} });
+const bot = new Bot(token, {polling: true});
 
 const prepareData = (body) => {
     const launches = JSON.parse(body).launches;
